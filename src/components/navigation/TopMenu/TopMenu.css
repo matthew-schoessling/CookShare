@@ -1,6 +1,6 @@
 nav {
     position: absolute;
-    height: 45px;
+    height: 60px;
     left: 0px;
     right: 0px;
     top: 0px;
@@ -14,13 +14,13 @@ nav {
     flex-direction: row;
     align-items: center;
     padding: 0px;
-    gap: 40px;
+    gap: 50px;
     
     position: absolute;
     width: fit-content;
-    height: 30px;
+    height: 40px;
     left: 20px;
-    top: 7.5px;
+    top: 10px;
 }
 
 .top-menu-item {
@@ -36,12 +36,11 @@ nav {
     gap: 10px;
     
     width: fit-content;
-    height: 30px;
 }
 
 .top-menu-logo {
-    width: 32.79px;
-    height: 30px;
+    width: 43.72px;
+    height: 40px;
 
     flex: none;
     order: 0;
@@ -60,7 +59,7 @@ nav {
     font-family: 'Ubuntu';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 22px;
     
     /* Primary */
@@ -83,7 +82,7 @@ nav {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 20px;
     
     color: #000000;
@@ -91,10 +90,10 @@ nav {
 
 .top-menu-user {
     position: absolute;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     right: 20px;
-    top: 5px;
+    top: 10px;
 
     background-image: url('../../../../public/images/sample-user.png');
     background-size: contain;
