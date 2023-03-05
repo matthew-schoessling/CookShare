@@ -1,0 +1,104 @@
+nav {
+    position: absolute;
+    height: 45px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.top-menu-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+    
+    position: absolute;
+    width: fit-content;
+    height: 30px;
+    left: 20px;
+    top: 7.5px;
+}
+
+.top-menu-item {
+    flex: none;
+    flex-grow: 0;
+}
+
+.top-menu-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    
+    width: fit-content;
+    height: 30px;
+}
+
+.top-menu-logo {
+    width: 32.79px;
+    height: 30px;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    background-image: url('../../../../public/images/logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-menu-title {
+    width: auto;
+    height: 23px;
+    
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    
+    /* Primary */
+    
+    color: #AF2B3E;
+    text-decoration: none;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.list-item {
+    width: auto;
+    height: 19px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    
+    color: #000000;
+}
+
+.top-menu-user {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 20px;
+    top: 5px;
+
+    background-image: url('../../../../public/images/sample-user.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.12));
+}

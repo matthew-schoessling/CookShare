@@ -1,7 +1,7 @@
 import React from 'react';
 import TopMenu from '../../components/navigation/TopMenu'
 
-function Feed(props) {
+function Browse(props) {
   return (
     <div>
         <TopMenu tab={props.tab}/>
@@ -9,4 +9,4 @@ function Feed(props) {
   );
 }
 
-export default Feed;
+export default Browse;
