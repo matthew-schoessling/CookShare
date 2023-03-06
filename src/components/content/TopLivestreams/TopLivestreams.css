@@ -1,0 +1,16 @@
+.livestream-preview {
+    width: auto;
+    height: 480px;
+
+    background-image: url('../../../../public/images/livestream-preview.png');
+    border-radius: 10px;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
