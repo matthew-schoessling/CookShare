@@ -1,16 +1,42 @@
+.slick-slider {
+    top: 100px;
+    height: 250px;
+    left: 0px;
+}
+
+.slick-list {
+    height: inherit;
+}
+
+.slick-track {
+    height: inherit;
+}
+
+.slick-slide {
+    height: inherit;
+}
+
 .livestream-preview {
-    width: auto;
-    height: 480px;
+    position: relative;
+    height: 250px;
+    width: 444.38px;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
 
     background-image: url('../../../../public/images/livestream-preview.png');
-    border-radius: 10px;
+    border-radius: 7.5px;
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
+}
 
-    /* Inside auto layout */
+.slick-prev {
+    left: 10px; /* adjust this value to move the button to the desired position */
+    z-index: 1; /* make sure the button is on top of the carousel */
+}
 
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+.slick-next {
+    right: 10px; /* adjust this value to move the button to the desired position */
+    z-index: 1; /* make sure the button is on top of the carousel */
 }
