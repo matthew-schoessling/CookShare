@@ -1,6 +1,6 @@
 .slick-slider {
     top: 100px;
-    height: 250px;
+    height: 300px;
     left: 0px;
 }
 
@@ -13,14 +13,14 @@
 }
 
 .slick-slide {
-    height: inherit;
+    height: 250px;
 }
 
 .livestream-preview {
     position: relative;
     height: 250px;
     width: 444.38px;
-    top: 0px;
+    top: 25px;
     left: 50%;
     transform: translate(-50%, 0%);
 
@@ -29,6 +29,16 @@
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.slick-center {
+    height: 300px;
+}
+
+.slick-center .livestream-preview {
+    top: 0px;
+    height: 300px;
+    width: 533.33px;
 }
 
 .slick-prev {
