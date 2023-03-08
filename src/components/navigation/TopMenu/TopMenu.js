@@ -14,21 +14,21 @@ function TopMenu(props) {
 
   return (
     <nav>
-      <div class="top-menu-list">
+      <div className="top-menu-list">
         <Link to="/" style={{ textDecoration: 'none' }}>
-          <div class="top-menu-header top-menu-item">
-            <div class="top-menu-logo"></div>
-            <h3 class="top-menu-title">CookShare</h3>
+          <div className="top-menu-header top-menu-item">
+            <div className="top-menu-logo"></div>
+            <h3 className="top-menu-title">CookShare</h3>
           </div>
         </Link>
         <Link to="/feed" style={{ textDecoration: 'none' }}>
-          <h3 class="top-menu-item list-item">{feedItem}</h3>
+          <h3 className="top-menu-item list-item">{feedItem}</h3>
         </Link>
         <Link to="/browse" style={{ textDecoration: 'none' }}>
-          <h3 class="top-menu-item list-item">{browseItem}</h3>
+          <h3 className="top-menu-item list-item">{browseItem}</h3>
         </Link>
       </div>
-      <div class="top-menu-user"></div>
+      <div className="top-menu-user"></div>
     </nav>
   );
 }

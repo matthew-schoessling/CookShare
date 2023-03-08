@@ -1,0 +1,183 @@
+.past-livestreams-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    
+    width: 850px;
+    height: fit-content;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.past-livestreams-header {
+    margin: 0px;
+    width: auto;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    position: relative;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.past-livestreams-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    margin: 0;
+    
+    width: inherit;
+    height: fit-content;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.past-livestream-container {
+    position: relative;
+    width: inherit;
+    height: 60px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    list-style: none;
+}
+
+.past-livestream-image {
+    position: relative;
+    width: 106.65px;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    
+    background-image: url('../../../../public/images/livestream-preview.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+}
+
+.past-livestream-user {
+    position: absolute;
+    width: 270px;
+    height: 21px;
+    left: 117px;
+    top: -9px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+}
+
+.past-livestream-title {
+    position: absolute;
+    width: 270px;
+    height: 16px;
+    left: 117px;
+    bottom: -24px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    
+    color: #000000;
+}
+
+.past-livestream-recipe {
+    position: absolute;
+    width: 263px;
+    height: 21px;
+    right: 0px;
+    top: -9px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    
+    text-align: right;
+    
+    color: #000000;
+}
+
+.past-livestream-category {
+    position: absolute;
+    width: 263px;
+    height: 16px;
+    right: 0px;
+    bottom: -24px;
+    
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    
+    color: #000000;
+}
+
+@media all and (max-width: 1850px) {
+    .past-livestreams-wrapper {
+        width: 750px;
+    }
+}
+
+@media all and (max-width: 1615px) {
+    .past-livestreams-wrapper {
+        width: 650px;
+    }
+}
+
+@media all and (max-width: 1450px) {
+    .past-livestreams-wrapper {
+        width: 850px;
+    }
+}
+
+@media all and (max-width: 925px) {
+    .past-livestreams-wrapper {
+        width: 650px;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .past-livestreams-wrapper {
+        width: 450px;
+    }
+}

@@ -1,0 +1,167 @@
+.recent-recipes-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+    
+    width: 850px;
+    height: fit-content;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.recent-recipes-header {
+    margin: 0px;
+    width: auto;
+    height: 28px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    position: relative;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.recent-recipes-list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 20px;
+    margin: 0;
+    
+    width: inherit;
+    height: fit-content;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.recent-recipe-container {
+    position: relative;
+    width: inherit;
+    height: 60px;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+    list-style: none;
+}
+
+.recent-recipe-user-image {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    left: -5px;
+    top: 0px;
+    
+    background-image: url('../../../../public/images/sample-user.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+}
+
+.recent-recipe-user {
+    position: absolute;
+    width: 270px;
+    height: 21px;
+    left: 70px;
+    top: 1px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+}
+
+.recent-recipe-name {
+    position: absolute;
+    width: 263px;
+    height: 21px;
+    right: 0px;
+    top: -9px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    
+    text-align: right;
+    
+    color: #000000;
+}
+
+.recent-recipe-category {
+    position: absolute;
+    width: 263px;
+    height: 16px;
+    right: 1px;
+    bottom: -24px;
+    
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    
+    color: #000000;
+}
+
+@media all and (max-width: 1850px) {
+    .recent-recipes-wrapper {
+        width: 750px;
+    }
+}
+
+@media all and (max-width: 1615px) {
+    .recent-recipes-wrapper {
+        width: 650px;
+    }
+}
+
+@media all and (max-width: 1450px) {
+    .recent-recipes-wrapper {
+        width: 850px;
+    }
+}
+
+@media all and (max-width: 925px) {
+    .recent-recipes-wrapper {
+        width: 650px;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .recent-recipes-wrapper {
+        width: 450px;
+    }
+}
