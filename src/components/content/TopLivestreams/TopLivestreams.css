@@ -13,7 +13,9 @@
 }
 
 .slick-slide {
+    position: relative;
     height: 250px;
+    z-index: 1;
 }
 
 .livestream-preview {
@@ -24,14 +26,16 @@
     left: 50%;
     transform: translate(-50%, 0%);
 
-    background-image: url('../../../../public/images/livestream-preview.png');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../../../../public/images/livestream-preview.png');
     border-radius: 7.5px;
     background-size: cover; 
     background-position: center;
     background-repeat: no-repeat;
+    /* filter: drop-shadow(0px 5px 8.5px rgba(0, 0, 0, 0.5)); */
 }
 
 .slick-center {
+    z-index: 2;
     height: 300px;
 }
 
@@ -39,14 +43,20 @@
     top: 0px;
     height: 300px;
     width: 533.33px;
+    background: url('../../../../public/images/livestream-preview.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .slick-prev {
-    left: 10px; /* adjust this value to move the button to the desired position */
+    left: 25px; /* adjust this value to move the button to the desired position */
     z-index: 1; /* make sure the button is on top of the carousel */
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9));
 }
 
 .slick-next {
-    right: 10px; /* adjust this value to move the button to the desired position */
+    right: 25px; /* adjust this value to move the button to the desired position */
     z-index: 1; /* make sure the button is on top of the carousel */
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.9));
 }
