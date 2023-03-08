@@ -10,8 +10,10 @@ function Feed(props) {
     <div className="feed">
         <TopMenu tab={props.tab}/>
         <TopLivestreams />
-        <PastLivestreams />
-        <RecentRecipes />
+        <div className="row-column-view">
+          <PastLivestreams />
+          <RecentRecipes />
+        </div>
     </div>
   );
 }

@@ -5,12 +5,12 @@
     padding: 0px;
     gap: 10px;
     
-    position: absolute;
-    width: 660px;
+    width: 850px;
     height: fit-content;
-    left: calc(50% - 660px/2 - 370px);
-    top: 450px;  
-    padding-bottom: 50px;  
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 }
 
 .past-livestreams-header {
@@ -150,4 +150,34 @@
     text-align: right;
     
     color: #000000;
+}
+
+@media all and (max-width: 1850px) {
+    .past-livestreams-wrapper {
+        width: 750px;
+    }
+}
+
+@media all and (max-width: 1615px) {
+    .past-livestreams-wrapper {
+        width: 650px;
+    }
+}
+
+@media all and (max-width: 1450px) {
+    .past-livestreams-wrapper {
+        width: 850px;
+    }
+}
+
+@media all and (max-width: 925px) {
+    .past-livestreams-wrapper {
+        width: 650px;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .past-livestreams-wrapper {
+        width: 450px;
+    }
 }

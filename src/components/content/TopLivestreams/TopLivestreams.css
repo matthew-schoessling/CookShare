@@ -83,3 +83,25 @@
         width: 533.33px;
     }
 }
+
+@media all and (max-width: 575px) {
+    .slick-slider {
+        height: 253.125px;
+    }
+
+    .livestream-preview {
+        height: 225px;
+        width: 400px;
+        top: 12.5px;
+        border-radius: 5px;
+    }
+
+    .slick-center {
+        height: 253.125px;
+    }
+
+    .slick-center .livestream-preview {
+        height: 253.125px;
+        width: 450px;
+    }
+}

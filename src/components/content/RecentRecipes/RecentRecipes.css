@@ -5,12 +5,12 @@
     padding: 0px;
     gap: 10px;
     
-    position: absolute;
-    width: 660px;
+    width: 850px;
     height: fit-content;
-    left: calc(50% - 660px/2 + 370px);
-    top: 450px; 
-    padding-bottom: 50px;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
 }
 
 .recent-recipes-header {
@@ -73,7 +73,7 @@
     position: relative;
     width: 60px;
     height: 60px;
-    left: 0px;
+    left: -5px;
     top: 0px;
     
     background-image: url('../../../../public/images/sample-user.png');
@@ -123,7 +123,7 @@
     position: absolute;
     width: 263px;
     height: 16px;
-    right: 0px;
+    right: 1px;
     bottom: -24px;
     
     font-family: 'Roboto';
@@ -134,4 +134,34 @@
     text-align: right;
     
     color: #000000;
+}
+
+@media all and (max-width: 1850px) {
+    .recent-recipes-wrapper {
+        width: 750px;
+    }
+}
+
+@media all and (max-width: 1615px) {
+    .recent-recipes-wrapper {
+        width: 650px;
+    }
+}
+
+@media all and (max-width: 1450px) {
+    .recent-recipes-wrapper {
+        width: 850px;
+    }
+}
+
+@media all and (max-width: 925px) {
+    .recent-recipes-wrapper {
+        width: 650px;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .recent-recipes-wrapper {
+        width: 450px;
+    }
 }
