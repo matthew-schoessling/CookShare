@@ -7,11 +7,6 @@ const FeedList = () => {
   const [ingredients, setIngredients] = useState([]);
   const [instructions, setInstructions] = useState([]);
 
-//   if (!postCheck) {
-//     //createNewRecipe("4 Apples and Bread Crumbs", "Make bread crumbs into crust then mush in apples for applie pie!!");
-//     postCheck = true;
-//   }
-
   useEffect(() => {
     getAllRecipes().then((recipes) => {
       setRecipes(recipes);
@@ -20,7 +15,8 @@ const FeedList = () => {
 
   // Flags in state for whether to add/remove recipe
   const [add, setAdd] = useState(false);
-//   const [remove, setRemove] = useState("");
+  //use this later if we want remove capabilities
+//   const [remove, setRemove] = useState(""); 
 
   // UseEffect that runs when changes
   // are made to the state variables/flags
@@ -68,8 +64,7 @@ const FeedList = () => {
             {recipes.map((recipe) => (
               <div>
                 <span>
-                  {/* Using getter for lesson Object to display name. Key was causing an error, 
-                  even when using recipe.id like lecture 14 code example, so I dropped key and no error was given*/}
+                  {/* This functionality has switched to recent recipe component. Leaving it here for now in case we want to use later*/}
                   <li key={recipe.id}>
                     {recipe.get("ingredients")} | {recipe.get("instructions")}
                   </li>{" "}

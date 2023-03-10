@@ -1,6 +1,12 @@
 import React from 'react';
 import './PastLivestreams.css'
 
+// Have to discuss how we want to get the data into here
+/* 
+Do we need a separate class with past livestreams? Or does each recipe have an optional livestream attachment to it 
+and if it is attached then include it in past livestream?
+ */
+
 function PastLivestreams() {
   return (
     <div className="past-livestreams-wrapper">

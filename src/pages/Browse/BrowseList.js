@@ -3,6 +3,11 @@ import { getAllUsers } from '../../services/UserService';
 import { getAllCategories } from '../../services/CategoryService';
 
 // Browse allows us to browse categories and popular chefs
+
+/* 
+Just displaying that user and category parse services are working correctly. Feature 5 we will tidy up which pages/components
+use which data services
+*/
 const BrowseList = () => {
   const [users, setUsers] = useState([]);
   const [categories, setCategories] = useState([]);
@@ -19,7 +24,8 @@ const BrowseList = () => {
   return (
       <div>
           <hr />
-          <h1>hidden</h1>
+          {/* Will need to add css to nav bar so it has a bottom margin */}
+          <h1>hidden</h1> 
           <h3>This is the browse list component</h3>
           <div>
               <h5>Showing users</h5>

@@ -1,6 +1,7 @@
 import React from "react";
 
 /* STATELESS CHILD COMPONENT */
+/* This form will be useful when we start submitting recipes on the user interface. Probably from user profile */
 const FeedForm = ({ onChangeIngredients, onChangeInstructions, onClick }) => {
   return (
     <div>

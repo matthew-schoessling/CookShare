@@ -20,14 +20,13 @@ const RecentRecipes = () => {
       <h2 className="recent-recipes-header">Recent Recipes</h2>
       <ul className="recent-recipes-list">
 
+      {/* Map through the array of recipes and display */}
       {recipes.map((recipe) => (
-        <li className="recent-recipe-container">
+        <li className="recent-recipe-container" key={recipe.get("ingredients")}>
           <div className="recent-recipe-user-image"></div>
             <h3 className="recent-recipe-user">Rachael Ray</h3>
             <h3 className="recent-recipe-name">{recipe.get("ingredients")}</h3>
-            {/* <h6 className="recent-recipe-category">{recipe.get("instructions")}</h6> */}
-            <h6 className="recent-recipe-category">{recipe.get("Category").className}</h6>
-            {console.log('problem: ', getCategoryByID(recipe.get("Category").id))}
+            <h6 className="recent-recipe-category">{recipe.get("Cat")}</h6>
         </li>
       ))}
         

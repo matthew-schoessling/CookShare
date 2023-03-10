@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+//Beta landing page that we'll add some fun css to at some point for nice background, aesthetic, etc
+
 function LandingPage() {
   return (
     <div>

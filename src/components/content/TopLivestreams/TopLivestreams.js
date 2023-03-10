@@ -23,6 +23,7 @@ const settings = {
     ],
   };
 
+  // Will need to put in some time determining what to display and how to do that with react-slick
 function TopLivestreams() {
     return (
         <Slider {...settings}>
