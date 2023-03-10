@@ -4,6 +4,7 @@ import TopLivestreams from '../../components/content/TopLivestreams';
 import PastLivestreams from '../../components/content/PastLivestreams';
 import RecentRecipes from '../../components/content/RecentRecipes';
 import './Feed.css';
+// import FeedList from './FeedList';
 
 function Feed(props) {
   return (
@@ -13,6 +14,7 @@ function Feed(props) {
         <div className="row-column-view">
           <PastLivestreams />
           <RecentRecipes />
+          {/* <FeedList></FeedList> */}
         </div>
     </div>
   );
