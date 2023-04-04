@@ -1,0 +1,132 @@
+.side-info {
+    position: absolute;
+    width: 624px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    
+    /* Primary Container */
+    
+    background: #FFDADA;
+}
+
+.logo-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 11.63px;
+
+    position: absolute;
+    width: fit-content;
+    left: 51px;
+    top: 50px;
+}
+
+.logo-icon {
+    width: 50.83px;
+    height: 46.51px;    
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    background-image: url('../../../../public/images/logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo-title {
+    width: auto;
+    height: 29px;
+    
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25.5796px;
+    line-height: 29px;
+    
+    /* Primary */
+    
+    color: #AF2B3E;
+    text-decoration: none;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.side-text {
+    position: absolute;
+    width: 377px;
+    height: 80px;
+    left: 50px;
+    top: 133px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34.4658px;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    
+    /* Primary */
+    
+    color: #AF2B3E;
+}
+
+.illustration {
+    position: absolute;
+    width: 283.06px;
+    height: 350px;
+    left: 170px;
+    top: calc(50% - 350px/2 + 74px);
+    
+    background-image: url('../../../../public/images/cooking-girl.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.illustration-credit {
+    position: absolute;
+    width: 124px;
+    height: 21px;
+    left: 50px;
+    bottom: 44px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    /* identical to box height */
+    
+    letter-spacing: 0.01em;
+    
+    /* Primary */
+    
+    color: #AF2B3E;
+}
+
+@media all and (max-height: 640px) {
+    .illustration {
+        visibility: hidden;
+    }
+    
+    .illustration-credit {
+        visibility: hidden;
+    }
+
+    .logo-header {
+        top: calc(50% - 46.51px/2 - 58.25px);
+    }
+    
+    .side-text {
+        top: calc(50% - 80px/2 + 41.5px);
+    }
+}
