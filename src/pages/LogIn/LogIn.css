@@ -1,0 +1,93 @@
+.side-info {
+    position: absolute;
+    width: 624px;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    
+    /* Primary Container */
+    
+    background: #FFDADA;
+}
+
+.logo-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 11.63px;
+
+    position: absolute;
+    width: fit-content;
+    left: 51px;
+    top: 79px;
+}
+
+.logo-icon {
+    width: 50.83px;
+    height: 46.51px;    
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+    background-image: url('../../../public/images/logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo-title {
+    width: auto;
+    height: 29px;
+    
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25.5796px;
+    line-height: 29px;
+    
+    /* Primary */
+    
+    color: #AF2B3E;
+    text-decoration: none;
+    
+    
+    /* Inside auto layout */
+    
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.side-text {
+    position: absolute;
+    width: 377px;
+    height: 80px;
+    left: 50px;
+    top: 162px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34.4658px;
+    line-height: 40px;
+    letter-spacing: 0.01em;
+    
+    /* Primary */
+    
+    color: #AF2B3E;
+}
+
+.illustration {
+    position: absolute;
+    width: 480px;
+    height: 593px;
+    left: 72px;
+    top: 283px;
+    
+    background-image: url('../../../public/images/cooking-girl.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
