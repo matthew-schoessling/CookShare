@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import LandingPage from '../pages/AuthPage';
 import Feed from '../pages/Feed';
 import Browse from '../pages/Browse';
-import AuthLogin from '../pages/AuthPage/AuthLogin'; //For this and register, they're two different pages so maybe separate those folders
-import AuthRegister from '../pages/AuthPage/AuthRegister';
+import AuthLogin from '../pages/AuthPage/AuthLogin'; //For this and signup, they're two different pages so maybe separate those folders
+import AuthSignUp from '../pages/AuthPage/AuthSignUp';
 import ProtectedRoute from "./ProtectedRoute";
 
 // Routing from the nav bar
@@ -14,7 +14,7 @@ function Routing() {
     <Router>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
-        <Route path="/register" element={<AuthRegister />} />
+        <Route path="/signup" element={<AuthSignUp />} />
         <Route path="/login" element={<AuthLogin />} />
 
         <Route 

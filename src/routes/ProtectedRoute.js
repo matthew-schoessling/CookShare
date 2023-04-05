@@ -1,5 +1,5 @@
 // This is where we'll setup the protected route. I think from the beginning everything should be protected
-// Iow when somebody accesses the website they're brought to a home page with register or signup
+// Iow when somebody accesses the website they're brought to a home page with login or signup
 
 import React from "react";
 import { Navigate } from "react-router-dom";
@@ -10,7 +10,7 @@ const ProtectedRoute = ({ element: Component, back: UnAuth, ...rest }) => {
   if (checkUser()) {
     return <Component />;
   } else {
-    alert(" Please login or register in order to view this page. ")
+    alert(" Please login or sign up in order to view this page. ")
     return <Navigate to="/" replace />
   }
 };

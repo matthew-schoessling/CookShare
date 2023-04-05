@@ -1,11 +1,11 @@
-// Auth Register
+// Auth Sign Up
 
 import React, { useEffect, useState } from "react";
 import { checkUser, createUser } from "../../services/AuthService";
 import AuthForm from "./AuthForm";
 import { useNavigate } from "react-router-dom";
 
-const AuthRegister = () => {
+const AuthSignUp = () => {
   const navigate = useNavigate();
 
   const [newUser, setNewUser] = useState({
@@ -33,7 +33,7 @@ const AuthRegister = () => {
       createUser(newUser).then((userCreated) => {
         if (userCreated) {
           alert(
-            `${userCreated.get("firstName")}, you successfully registered!`
+            `${userCreated.get("firstName")}, you successfully signed up!`
           );
           navigate("/");
         }
@@ -72,4 +72,4 @@ const AuthRegister = () => {
   );
 };
 
-export default AuthRegister;
+export default AuthSignUp;

@@ -1,8 +1,8 @@
-// This service will use createUser during register and loginUser during login. Will also contain checkUser for verification
+// This service will use createUser during signup and loginUser during login. Will also contain checkUser for verification
 
 import Parse from "parse";
 
-// used in auth register component
+// used in auth signup component
 export const createUser = (newUser) => {
   const user = new Parse.User();
 

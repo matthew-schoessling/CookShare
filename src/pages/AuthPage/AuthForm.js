@@ -1,4 +1,4 @@
-// Auth Form for login and register. Use his logic from kickoff
+// Auth Form for login and signup. Use his logic from kickoff
 
 import React from "react";
 
