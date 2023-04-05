@@ -6,24 +6,27 @@ import { Link } from 'react-router-dom';
 // This landing page can become the login/register page. We'll incorporate the subcomponents of login/register
 // Auth.js
 
-function LandingPage() {
+function AuthPage() {
   return (
-    // <div>
-    //   <h1>Welcome to CookShare! Das what's up</h1>
-    //   <p>Check out <Link to="/feed">your feed</Link>.</p>
-    // </div>
+    <div>
+    <div>
+      <h1>Welcome to CookShare! Das what's up</h1>
+      <p>Check out <Link to="/feed">your feed</Link>.</p>
+      <p>Check out <Link to="/browse">your browse</Link>.</p>
+    </div>
 
     <div>
-      <Link to="/auth/register">
+      <Link to="/register">
         <button>Register</button>
       </Link>
       <br />
       <br />
-      <Link to="/auth/login">
+      <Link to="/login">
         <button>Login</button>
       </Link>
+    </div>
     </div>
   );
 }
 
-export default LandingPage;
+export default AuthPage;

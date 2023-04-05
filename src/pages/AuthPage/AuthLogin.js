@@ -20,6 +20,7 @@ const AuthLogin = () => {
       if (checkUser()) {
         alert("You are already logged in");
         navigate("/");
+        console.log("i fire once")
       }
     }, [navigate]);
   
@@ -28,9 +29,9 @@ const AuthLogin = () => {
       if (currentUser && add) {
         loginUser(currentUser).then((userLoggedIn) => {
           if (userLoggedIn) {
-            alert(
-              `${userLoggedIn.get("firstName")}, you successfully logged in!`
-            );
+            // alert(
+            //   `${userLoggedIn.get("firstName")}, you successfully logged in!`
+            // );
             navigate("/");
           }
           // TODO: redirect user to main app
@@ -41,9 +42,9 @@ const AuthLogin = () => {
   
     const onChangeHandler = (e) => {
       e.preventDefault();
-      console.log(e.target);
+      // console.log(e.target);
       const { name, value: newValue } = e.target;
-      console.log(newValue);
+      // console.log(newValue);
   
       setCurrentUser({
         ...currentUser,

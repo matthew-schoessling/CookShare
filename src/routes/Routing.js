@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import LandingPage from '../pages/LandingPage';
+import LandingPage from '../pages/AuthPage';
 import Feed from '../pages/Feed';
 import Browse from '../pages/Browse';
-import AuthLogin from '../pages/LandingPage/AuthLogin'; //For this and register, they're two different pages so maybe separate those folders
-import AuthRegister from '../pages/LandingPage/AuthRegister';
+import AuthLogin from '../pages/AuthPage/AuthLogin'; //For this and register, they're two different pages so maybe separate those folders
+import AuthRegister from '../pages/AuthPage/AuthRegister';
 import ProtectedRoute from "./ProtectedRoute";
 
 // Routing from the nav bar
@@ -13,18 +13,26 @@ function Routing() {
   return (
     <Router>
       <Routes>
-        <Route exact path="/auth" element={<LandingPage />} />
-        <Route path="/feed" element={<Feed tab="Feed"/>} />
-        <Route path="/browse" element={<Browse tab="Browse"/>} />
-        
-        {/* Will Need to add routes for login, auth, etc */}
-        <Route path="/auth/register" element={<AuthRegister />} />
-        <Route path="/auth/login" element={<AuthLogin />} />
-        <Route
-          path="/"
-          element={<ProtectedRoute path="/" element={Browse} />}
+        <Route exact path="/" element={<LandingPage />} />
+        <Route path="/register" element={<AuthRegister />} />
+        <Route path="/login" element={<AuthLogin />} />
+
+        <Route 
+          path="/feed" 
+          element={<ProtectedRoute path="/feed" element={Feed} />} 
         />
-        <Route path="*" element={<Navigate to="/auth" replace />} />
+        <Route 
+          path="/browse" 
+          element={<ProtectedRoute path="/browse" element={Browse} />} 
+        />
+        <Route 
+          path="/" 
+          element={<ProtectedRoute path="/" element={LandingPage} />} 
+        />
+        {/* <Route path="/" element={<Browse tab="Browse"/>} /> */}
+        
+        
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>
   );

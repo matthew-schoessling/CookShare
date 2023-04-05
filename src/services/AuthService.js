@@ -42,6 +42,6 @@ export const loginUser = (currUser) => {
     });
 };
 
-export const checkUser = () => {
+export const checkUser = (props) => {
   return Parse.User.current()?.authenticated;
 };

@@ -2,24 +2,16 @@
 // Iow when somebody accesses the website they're brought to a home page with register or signup
 
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { checkUser } from "../services/AuthService";
 
 // You can pass props using the spread operator to throw them on an object if there are too many to break out
-const ProtectedRoute = ({ element: Component, ...rest }) => {
-  console.log("element: ", Component);
-  const navigate = useNavigate();
-  const goBackHandler = () => {
-    navigate("/auth");
-  };
+const ProtectedRoute = ({ element: Component, back: UnAuth, ...rest }) => {
   if (checkUser()) {
     return <Component />;
   } else {
-    return (
-      <div>
-        <p>Unauthorized!</p> <button onClick={goBackHandler}>Go Back.</button>
-      </div>
-    );
+    alert(" Please login or register in order to view this page. ")
+    return <Navigate to="/" replace />
   }
 };
 
