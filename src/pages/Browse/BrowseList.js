@@ -32,14 +32,11 @@ const BrowseList = () => {
         {users.length > 0 && (
           <ul>
             {users.map((user) => (
-              <div>
-                <span>
-                  {/* Using getter for lesson Object to display name */}
-                  <li key={user.id}>
-                    {user.get("username")}
-                  </li>{" "}
-                </span>
-              </div>
+                  <li key={user.get("username")}>
+                    <div>
+                      {user.get("username")}
+                    </div>
+                  </li>
             ))}
           </ul>
         )}
@@ -50,18 +47,15 @@ const BrowseList = () => {
         {categories.length > 0 && (
           <ul>
             {categories.map((category) => (
-              <div>
-                <span>
-                  {/* Dropped key like in FeedList */}
-                  <li key={category.id}>
-                    {category.get("name")} 
-                  </li>{" "}
-                </span>
-              </div>
+                  <li key={category.get("name")}>
+                    <div>
+                      {category.get("name")} 
+                    </div>
+                  </li>
             ))}
           </ul>
         )}
-      </div>
+      </div> 
       </div>
   )};
 

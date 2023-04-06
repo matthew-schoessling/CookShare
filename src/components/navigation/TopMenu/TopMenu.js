@@ -28,7 +28,9 @@ function TopMenu(props) {
           <h3 className="top-menu-item list-item">{browseItem}</h3>
         </Link>
       </div>
-      <div className="top-menu-user"></div>
+      <Link to="/login" style={{ textDecoration: 'none' }}>
+        <div className="top-menu-user"></div>
+      </Link>
     </nav>
   );
 }
