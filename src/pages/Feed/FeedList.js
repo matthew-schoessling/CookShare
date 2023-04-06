@@ -66,7 +66,7 @@ const FeedList = () => {
                 <span>
                   {/* This functionality has switched to recent recipe component. Leaving it here for now in case we want to use later*/}
                   <li key={recipe.id}>
-                    {recipe.get("ingredients")} | {recipe.get("instructions")}
+                    "hello"
                   </li>{" "}
                 </span>
               </div>
