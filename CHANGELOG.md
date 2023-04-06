@@ -17,3 +17,18 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 ### Removed
+
+
+## [0.3.0] - 2023-04-05
+
+### Added
+-  Authentication functionality using protected routes. Now website pages are restricted
+-  Login and signup pages to the landing page
+
+### Fixed
+- Fixed BrowseList key errors in the lists being formed
+
+### Changed
+- Landing page is now the default authentication page. CSS still to come
+
+### Removed
