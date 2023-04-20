@@ -3,6 +3,7 @@ import LandingPage from '../pages/LandingPage';
 import Feed from '../pages/Feed';
 import Browse from '../pages/Browse';
 import Publisher from '../components/streaming/Publisher';
+import Viewer from '../components/streaming/Viewer';
 
 // Routing from the nav bar
 // Might want to add profile once we have login capabilities
@@ -15,6 +16,7 @@ function Routing() {
         <Route path="/feed" element={<Feed tab="Feed"/>} />
         <Route path="/browse" element={<Browse tab="Browse"/>} />
         <Route path="/publisher" element={<Publisher />} />
+        <Route path="/viewer" element={<Viewer />} />
       </Routes>
     </Router>
   );
