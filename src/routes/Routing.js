@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import LandingPage from '../pages/AuthPage';
 import Feed from '../pages/Feed';
 import Browse from '../pages/Browse';
+import User from '../pages/User';
 // import LogIn from '../pages/LogIn';
 // import SignUp from '../pages/SignUp';
 import AuthLogin from '../pages/AuthPage/AuthLogin'; //For this and signup, they're two different pages so maybe separate those folders
@@ -26,6 +27,9 @@ function Routing() {
         />
         <Route 
           path="/browse" element={<ProtectedRoute path="/browse" element={Browse} />} 
+        />
+        <Route 
+          path="/user" element={<ProtectedRoute path="/user" element={User} />} 
         />
         <Route 
           path="/" element={<ProtectedRoute path="/" element={LandingPage} />} 
