@@ -77,8 +77,10 @@ export const loginUser = (currUser) => {
 export const logoutUser = () => {
 
   console.log("Loggin out User!")
-  Parse.User.logOut()
-  
+  Parse.User.logOut().then( () => {
+    alert('You have successfully logged out')
+  })
+
 
 }
 

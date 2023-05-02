@@ -105,8 +105,22 @@ nav {
     position: absolute;
     width: 55px;
     height: 40px;
-    right: 40px;
+    right: 60px;
     top: 5px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20%;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.12));
+}
+
+.top-menu-user-3 {
+    position: absolute;
+    width: 55px;
+    height: 40px;
+    right: 40px;
+    top: 10px;
 
     background-size: contain;
     background-position: center;

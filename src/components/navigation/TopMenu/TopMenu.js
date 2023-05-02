@@ -14,9 +14,11 @@ function TopMenu(props) {
     browseItem = <strong>Browse</strong>
   }
 
-  let isLoggedIn = true
+  let isLoggedIn = false
+  console.log(Parse.User.current())
   if (Parse.User.current()) {
-    isLoggedIn = false
+    console.log('in here')
+    isLoggedIn = true
   }
 
   return (
@@ -37,17 +39,22 @@ function TopMenu(props) {
       </div>
       <div className='top-menu-user-2'>
       { isLoggedIn ?
-        <Link to="/login">
-          <button className="top-menu-user-2">Login</button>
-        </Link> :
-         <Link to="/">
-          <button onClick={logoutUser} className="top-menu-user-2">Logout</button>
-        </Link>
+        <Link to="/">
+        <button onClick={logoutUser} className="top-menu-user-2">Logout</button>
+      </Link>:
+         <Link to="/login">
+         <button className="top-menu-user-2">Login</button>
+       </Link> 
       }
       </div>
-      <Link to="/profile" style={{ textDecoration: 'none' }}>
+      { isLoggedIn ?
+        <Link to="/profile" style={{ textDecoration: 'none' }}>
         <img className="top-menu-user" src={Parse.User.current().get("ProfilePic").url()} alt="Navigation tool to profile page"></img>
-      </Link>
+      </Link> :
+         <Link to="/">
+          <button className="top-menu-user-3">Profile</button>
+        </Link>
+      }
     </nav>
   );
 }

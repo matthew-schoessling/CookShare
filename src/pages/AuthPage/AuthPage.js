@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { logoutUser } from '../../services/AuthService';
+import TopMenu from '../../components/navigation/TopMenu/TopMenu'
 
 //Beta landing page that we'll add some fun css to at some point for nice background, aesthetic, etc
 
@@ -10,6 +11,7 @@ import { logoutUser } from '../../services/AuthService';
 function AuthPage() {
   return (
     <div>
+      <TopMenu></TopMenu>
     <div>
       <h1>Welcome to CookShare! Auth/Landing Page</h1>
       <p>Check out <Link to="/feed">your feed</Link>.</p>
