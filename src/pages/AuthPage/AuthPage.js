@@ -1,6 +1,6 @@
 import React from 'react';
 import TopMenu from '../../components/navigation/TopMenu/TopMenu'
-// import './AuthPage.css'
+import './AuthPage.css'
 
 //Beta landing page that we'll add some fun css to at some point for nice background, aesthetic, etc
 
@@ -11,9 +11,7 @@ function AuthPage() {
   return (
     <div>
       <TopMenu></TopMenu>
-    <div>
-      <h1>Welcome to CookShare! Auth/Landing Page</h1>
-    </div>
+      <h1 className="h1">Welcome to CookShare! Auth/Landing Page</h1>
     </div>
   );
 }

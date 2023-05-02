@@ -1,6 +1,6 @@
 .h1 {
-        margin-top: 70px;
-        position: absolute;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
 }

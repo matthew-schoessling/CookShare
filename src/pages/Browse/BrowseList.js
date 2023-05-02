@@ -26,7 +26,7 @@ const BrowseList = () => {
       <div>
           <hr />
           {/* Will need to add css to nav bar so it has a bottom margin */}
-          <h1>Welcome to the CookShare Livestream</h1> 
+          <h1 className="h1">Welcome to the CookShare Livestream</h1> 
           <div className='viewer'>
           <iframe src="https://viewer.millicast.com?streamId=cMFGWT/firstStream" allowfullscreen width="640" height="480"></iframe>
           </div>
