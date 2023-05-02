@@ -4,6 +4,7 @@ import Feed from '../pages/Feed';
 import Browse from '../pages/Browse';
 import Profile from '../pages/Profile';
 import NewRecipe from '../pages/NewRecipe';
+import Stream from '../pages/Stream';
 // import LogIn from '../pages/LogIn';
 // import SignUp from '../pages/SignUp';
 import AuthLogin from '../pages/AuthPage/AuthLogin'; //For this and signup, they're two different pages so maybe separate those folders
@@ -37,6 +38,9 @@ function Routing() {
         />
         <Route 
           path="/" element={<ProtectedRoute path="/" element={LandingPage} />} 
+        />
+        <Route
+          path="/stream" element={<ProtectedRoute path="/" element={Stream}/>}
         />
         <Route 
           path="/newrecipe" element={<ProtectedRoute path="/newrecipe" element={NewRecipe} />} 
