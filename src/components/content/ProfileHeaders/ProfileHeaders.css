@@ -1,0 +1,113 @@
+.profile-pic {
+
+    position: absolute;
+    width: 170px;
+    height: 160px;
+    left: 266px;
+    top: 120px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.profile-username {
+    position: absolute;
+width: 344px;
+height: 49px;
+left: 527px;
+top: 141px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+}
+
+.profile-bio {
+    position: absolute;
+width: 683px;
+height: 125px;
+left: 527px;
+top: 200px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 28px;
+
+color: #000000;
+}
+.profile-divider {
+    position: absolute;
+width: 1085px;
+height: 0px;
+left: 178px;
+top: 368px;
+
+border: 1px solid #000000;
+}
+
+.button-one {
+
+position: absolute;
+width: 170px;
+height: 43px;
+left: 1078px;
+top: 130px;
+
+background: #9A4058;
+border-radius: 10px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 25;
+font-size: 20px;
+line-height: 28px;
+
+color: #ffffff;
+}
+
+.button-two {
+    position: absolute;
+width: 170px;
+height: 43px;
+left: 1078px;
+top: 200px;
+
+background: #9A4058;
+border-radius: 10px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 25;
+font-size: 20px;
+line-height: 28px;
+
+color: #ffffff;
+}
+
+.button-three {
+    
+position: absolute;
+width: 170px;
+height: 43px;
+left: 1078px;
+top: 270px;
+
+background: #9A4058;
+border-radius: 10px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 25;
+font-size: 20px;
+line-height: 28px;
+
+color: #ffffff;
+}

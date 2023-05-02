@@ -95,9 +95,22 @@ nav {
     right: 20px;
     top: 10px;
 
-    background-image: url('../../../../public/images/sample-user.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    border-radius: 50%;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.12));
+}
+    .top-menu-user-2 {
+    position: absolute;
+    width: 55px;
+    height: 40px;
+    right: 40px;
+    top: 5px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20%;
     filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.12));
 }

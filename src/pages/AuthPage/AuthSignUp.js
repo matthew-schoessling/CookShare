@@ -1,7 +1,7 @@
 // Auth Sign Up
 
 import React, { useEffect, useState } from "react";
-import { checkUser, createUser } from "../../services/AuthService";
+import { checkUser, createUser, createNewProfile } from "../../services/AuthService";
 import SignUpForm from "../SignUp/SignUpForm";
 import { useNavigate } from "react-router-dom";
 
@@ -31,6 +31,7 @@ const AuthSignUp = () => {
   useEffect(() => {
     if (newUser && add) {
       createUser(newUser).then((userCreated) => {
+        createNewProfile()
         if (userCreated) {
           alert(
             `${userCreated.get("firstName")}, you successfully signed up! You're now logged in and can navigate to browse or feed!`
@@ -38,7 +39,7 @@ const AuthSignUp = () => {
           navigate("/");
         }
         setAdd(false);
-      });
+    })
     }
   }, [navigate, newUser, add]);
 
