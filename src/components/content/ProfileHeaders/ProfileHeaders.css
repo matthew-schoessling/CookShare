@@ -59,7 +59,7 @@ position: absolute;
 width: 170px;
 height: 43px;
 left: 1078px;
-top: 130px;
+top: 100px;
 
 background: #9A4058;
 border-radius: 10px;
@@ -78,7 +78,7 @@ color: #ffffff;
 width: 170px;
 height: 43px;
 left: 1078px;
-top: 200px;
+top: 170px;
 
 background: #9A4058;
 border-radius: 10px;
@@ -98,7 +98,7 @@ position: absolute;
 width: 170px;
 height: 43px;
 left: 1078px;
-top: 270px;
+top: 240px;
 
 background: #9A4058;
 border-radius: 10px;
@@ -111,3 +111,23 @@ line-height: 28px;
 
 color: #ffffff;
 }
+
+.button-four {
+    
+    position: absolute;
+    width: 170px;
+    height: 43px;
+    left: 1078px;
+    top: 310px;
+    
+    background: #9A4058;
+    border-radius: 10px;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 25;
+    font-size: 20px;
+    line-height: 28px;
+    
+    color: #ffffff;
+    }

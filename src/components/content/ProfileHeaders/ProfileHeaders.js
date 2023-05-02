@@ -27,6 +27,9 @@ function ProfileHeaders() {
       <Link to="/uploadimage" style={{ textDecoration: 'none' }}>
       <button className='button-three' >Upload Image</button>
       </Link>
+      <Link to="/stream" style={{ textDecoration: 'none' }}>
+        <button className='button-four' >Livestream</button>
+      </Link>
       </div>
   );
 }
