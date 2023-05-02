@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getAllUsers } from '../../services/UserService';
 import { getAllCategories } from '../../services/CategoryService';
+import './Browse.css'
 
 // Browse allows us to browse categories and popular chefs
 
@@ -25,8 +26,11 @@ const BrowseList = () => {
       <div>
           <hr />
           {/* Will need to add css to nav bar so it has a bottom margin */}
-          <h1>hidden</h1> 
-          <h3>This is the browse list component</h3>
+          <h1>Welcome to the CookShare Livestream</h1> 
+          <div className='viewer'>
+          <iframe src="https://viewer.millicast.com?streamId=cMFGWT/firstStream" allowfullscreen width="640" height="480"></iframe>
+          </div>
+          {/* <h3>This is the browse list component</h3>
           <div>
               <h5>Showing users</h5>
         {users.length > 0 && (
@@ -55,7 +59,7 @@ const BrowseList = () => {
             ))}
           </ul>
         )}
-      </div> 
+      </div>  */}
       </div>
   )};
 
