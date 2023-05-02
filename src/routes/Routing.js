@@ -29,9 +29,6 @@ function Routing() {
           path="/browse" element={<ProtectedRoute path="/browse" element={Browse} />} 
         />
         <Route 
-          path="/user" element={<ProtectedRoute path="/user" element={User} />} 
-        />
-        <Route 
           path="/" element={<ProtectedRoute path="/" element={LandingPage} />} 
         />
         {/* If somebody types some random route into the nav bar, they'll be sent to Landing Page */}
