@@ -1,6 +1,6 @@
 // AuthLogin
 import React, { useEffect, useState } from "react";
-import { checkUser, loginUser } from "../../services/AuthService"; 
+import { checkUser, loginUser, getProfile } from "../../services/AuthService"; 
 import { useNavigate } from "react-router-dom";
 import LogInForm from "../LogIn/LogInForm";
 
@@ -26,6 +26,8 @@ const AuthLogin = () => {
     // useEffect that run when changes are made to the state variable flags
     useEffect(() => {
       if (currentUser && add) {
+        // testing how to access that profile pointer we have
+        getProfile()
         loginUser(currentUser).then((userLoggedIn) => {
           if (userLoggedIn) {
             alert(
