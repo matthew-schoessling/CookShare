@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@millicast/sdk": "^0.1.39",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@voxeet/voxeet-web-sdk": "^3.9.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.2",
     "parse": "^4.0.1",
