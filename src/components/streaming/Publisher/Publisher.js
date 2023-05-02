@@ -1,68 +1,52 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { Publish, View, Director } from '@millicast/sdk';
+import { Publish, Director } from '@millicast/sdk';
+import './Publisher.css';
 
-async function getTokenGenerator() {
-  try {
-    const tokenGenerator = () => Director.getPublisher(
-      {
-        token: 'edbdcaa1e858eca026d6635cbc2b1a38488e8bfb94c8c2cf3156254e34dcd048', 
-        streamName: 'my-stream-name'
-      });
-
-      
-      return tokenGenerator
-  } catch (error) {
-    console.error('Failed to get token generator.\n', error);
-    throw error;
-  }
-}
+let publisher = null;
+let mediaStream = null;
 
 function BroadcastWidget(props) {
   const [streamStarted, setStreamStarted] = useState(false);
   const publisherRef = useRef(null);
   
   const handleStartStream = async () => {
+    const tokenGenerator = () => Director.getPublisher({
+      token: 'edbdcaa1e858eca026d6635cbc2b1a38488e8bfb94c8c2cf3156254e34dcd048', 
+      streamName: 'firstStream'
+    });
+  
+    publisher = new Publish('First stream!!!', tokenGenerator);
+    mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+      
+    // Publishing Options
+    const broadcastOptions = {
+      mediaStream: mediaStream
+    };
+        
+    // Start broadcast
     try {
-      // Generate a TokenGenerator for the user
-      const tokenGenerator = getTokenGenerator(props.userId);
-      const publisher = new Publish('my-stream-name', tokenGenerator);
+      await publisher.connect(broadcastOptions);
+    } catch (e) {
+      console.error('Connection failed, handle error', e);
+    }   
 
-      // Get media information
-      const mediaStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: true });
+    setStreamStarted(true);
+  }
 
-      // Publishing Options
-      const broadcastOptions = {
-        mediaStream: mediaStream
-      };
-
-      // Start broadcast
-      try {
-        await publisher.connect(broadcastOptions);
-      } catch (e) {
-        console.error('Connection failed, handle error', e);
-      }
-
-      // Create Millicast instance
-      const millicastView = new View('publish-stream-name', tokenGenerator);
-
-      setStreamStarted(true);
-    } catch (error) {
-      console.error('Failed to start streaming', error);
-    }
-  };
-
-  useEffect(() => {
-    // Attach the publisher to a video element
-    if (publisherRef.current) {
-      publisherRef.current.attach(document.getElementById('publisher-video'));
-    }
-  }, [streamStarted]);
-
-  console.log(streamStarted)
+  const handleStopStream = async () => {
+    publisher.stop();
+    mediaStream.getTracks().forEach(track => {
+      track.stop();
+    });
+    setStreamStarted(false);
+  }
 
   return (
-    <div>
-      <button onClick={handleStartStream}>Start Streaming</button>
+    <div className="publisher-div">
+      <button className={streamStarted ? "stop-button" : "start-button"} onClick={streamStarted ? handleStopStream : handleStartStream}>
+        {streamStarted ? 'Stop Streaming' : 'Start Streaming'}
+      </button>
+      <iframe src="https://viewer.millicast.com?streamId=cMFGWT/firstStream" allowFullScreen width="640" height="480"></iframe>
     </div>
   );
 }

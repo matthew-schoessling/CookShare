@@ -6,7 +6,7 @@ import BroadcastWidget from '../../components/streaming/Publisher';
 function User(props) {
   return (
     <div>
-      {/* <TopMenu tab={props.tab}/> */}
+      <TopMenu tab={props.tab}/>
       <BroadcastWidget />
     </div>
   );
