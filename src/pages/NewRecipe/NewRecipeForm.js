@@ -2,7 +2,10 @@ import React from "react";
 
 let values = [
         {"name": "Mexican", "objectId": "rcPEM9xl1i"},
-        {"name": "American", "objectId": "CcI09EygnW"}
+        {"name": "American", "objectId": "CcI09EygnW"},
+        {"name": "Italian", "objectId": "KPpsdScONN"},
+        {"name": "French", "objectId": "4Fg6g89XCx"},
+        {"name": "Desser", "objectId": "c6uAzzNjHd"},
     ]
 
 /* STATELESS CHILD COMPONENT */
@@ -21,7 +24,7 @@ const NewRecipeForm = ({ onChangeIngredients, onChangeInstructions, onClick, onC
         {/* Use the map() method to loop through the list of values and create an option element for each one */}
         {values.map((category) => (
           <option key={category.objectId} value={category.objectId}>
-            {category.name} - {category.objectId}
+            {category.name}
           </option>
         ))}
       </select>
