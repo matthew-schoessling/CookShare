@@ -15,9 +15,9 @@ function TopMenu(props) {
   }
 
   let isLoggedIn = false
-  console.log(Parse.User.current())
+  // console.log(Parse.User.current())
   if (Parse.User.current()) {
-    console.log('in here')
+    // console.log('in here')
     isLoggedIn = true
   }
 

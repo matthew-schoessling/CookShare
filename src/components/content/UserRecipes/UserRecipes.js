@@ -26,7 +26,7 @@ const UserRecipes = () => {
       {/* Map through the array of recipes and display */}
       {recipes.map((recipe) => (
 
-        <li className="recent-recipe-container" key={recipe.get("ingredients")}>
+        <li className="recent-recipe-container" key={recipe.get("objectId")}>
           <img className="recent-recipe-user-image" src={recipe.get("Category").get("Photo").url()} alt="category flik"></img>
             <h3 className="recent-recipe-user">{recipe.get("name")}</h3>
             <h3 className="recent-recipe-name">{recipe.get("ingredients")}</h3>

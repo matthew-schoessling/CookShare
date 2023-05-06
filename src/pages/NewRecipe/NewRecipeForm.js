@@ -5,7 +5,12 @@ let values = [
         {"name": "American", "objectId": "CcI09EygnW"},
         {"name": "Italian", "objectId": "KPpsdScONN"},
         {"name": "French", "objectId": "4Fg6g89XCx"},
-        {"name": "Desser", "objectId": "c6uAzzNjHd"},
+        {"name": "Dessert", "objectId": "c6uAzzNjHd"},
+        {"name": "Mediterranean", "objectId": "ILYQSewXWL"},
+        {"name": "Korean", "objectId": "Z6HiMkevR9"},
+        {"name": "Japanese", "objectId": "enaHHZaKpn"},
+        {"name": "Chinese", "objectId": "7b0JjfX1CH"},
+        {"name": "Breakfast", "objectId": "BxTOBdp4xT"},
     ]
 
 /* STATELESS CHILD COMPONENT */

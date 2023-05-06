@@ -24,37 +24,42 @@ export const createNewRecipe = async (ingredients, instructions, name, category)
   });
 }
 
-// Returning all parse objects from the db
-// Figure out how to get pointer data from a Recipe to its user's name and category's name
-// export const getAllRecipes = async () => {
-//   const Recipe = Parse.Object.extend("Recipe")
-  
+// Adds a new category which will eventually trigger useEffect
+export const addCategories = (e, activeCategories) => {
+  const newCategories = new Set(activeCategories);
+  newCategories.add(e);
+  return newCategories;
+}
 
-//   const query2 = new Parse.Query("Category") // Maybe this should be done in CategoryService and called as function?? Ask for feature 5
-//   query2.get("CcI09EygnW").then( (object) => {
-//     console.log("name: ", object.get("name"))
-//   })
+// Deletes a category which will eventually trigger useEffect
+export const deleteCategories = (e, activeCategories) => {
+  const newCategories = new Set(activeCategories);
+  newCategories.delete(e);
+  return newCategories;
+}
 
-//   const query = new Parse.Query(Recipe); // I just switched this to down here it may be getting messed up after query2 was called. Look later
+// Gets all the recipes based on if the recipes are in the activeCategories set
+export const getAllRecipes = async (activeCategories) => {
+  console.log("getting Categories in service: ", activeCategories)
+  const Recipe = new Parse.Object.extend('Recipe')
+ 
+   const query = new Parse.Query(Recipe);
+   query.include("Category")
+ 
+   return query.find().then((results) => { 
+     let count = 0
+     let len = results.length
+     let newArray = []
+      for (var i=0; i<len; i++) {
+        console.log("type: ", typeof(activeCategories))
+        if ( !activeCategories.has(results[count].get("Category").get("name")) ) {
+          results.splice(count, 1);
+          newArray = results
+          count-=1
+        }
+        count += 1;
+      }
+       return newArray
+   })
+ };
 
-//   return query.find().then((results) => {
-//     results.map( (result) => {
-//       console.log("Category: ", result.get("Category").id)
-//       query2.get(result.get("Category").id).then( (object) => {
-//         result.set("Cat", object.get("name")) //Ok for some reason this isn't fulling working as it puts all categories in as Mexican while some are American in our database.Could be some async thing to check out
-//         result.save()
-//       })
-//     })
-//     return results
-//   })
-// };
-
-// Query that returns based off an id. It kinda works but only returns a promise to RecentRecipes.js
-// Ask Eva or Professor Wicks if there's a way for it to return the category (and not the promise) async
-// export const getCategoryByID = async (objectId) => {
-//   const query = new Parse.Query("Category")
-//   await query.get(objectId).then((object) => {
-//     const thisName = object.get("name");
-//     return thisName;
-//   })
-// }
