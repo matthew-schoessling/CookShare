@@ -1,13 +1,15 @@
-import Parse from "parse";
-
-//CreateNewCategory create new Parse object and set name/photo (might not need this)
-export const createNewUser = (username, email, password) => {
-    // This probably won't be used but keeping here just in case
-    //I'd imagine categories are just created on the backend
-}
+import Parse from 'parse'
   
 // Returning all parse objects from the db
-export const getAllCategories = async () => {
+export const getAllCategories = () => {
+
+    // return [
+    //     {"name": "Mexican", "objectId": "rcPEM9xl1i"},
+    //     {"name": "American", "objectId": "CcI09EygnW"}
+    // ]
+
+    // While this is the dynamic way to get all the categories, I'm inputting static data to be able to instantly grab it
+
     const Category = Parse.Object.extend("Category")
     const query = new Parse.Query(Category);
   

@@ -23,6 +23,37 @@ export const createUser = (newUser) => {
     });
 };
 
+// Create New Profile to point to user
+export const createNewProfile = () => {
+  let profile = new Parse.Object('Profile')
+  
+  console.log("profile: ", profile)
+  console.log(Parse.User.current())
+  console.log(Parse.User.current().get("username"))
+
+  profile.set("PointerToUser", Parse.User.current())
+
+  console.log("USer from profile: ", profile.get("PointerToUser"))
+  // console.log("USer from profile: ", profile.get("PointerToUser").get("username"))
+
+  profile.save()
+
+  console.log("profile: ", profile)
+  Parse.User.current().set("PointerToProfile", profile)
+
+}
+
+export const getProfile = () => {
+  console.log("Loggin In!!")
+    const Profiles = Parse.Object.extend("Profile")
+    const query = new Parse.Query(Profiles);
+  
+    return query.find().then((results) => {
+      console.log(results)  
+      return results
+    })
+};
+
 // used in login component
 export const loginUser = (currUser) => {
   const user = new Parse.User();
@@ -41,6 +72,17 @@ export const loginUser = (currUser) => {
       alert(`Error: ${error.message}`);
     });
 };
+
+// Logging out the user
+export const logoutUser = () => {
+
+  console.log("Loggin out User!")
+  Parse.User.logOut().then( () => {
+    alert('You have successfully logged out')
+  })
+
+
+}
 
 // Checks if a user is authenticated
 export const checkUser = (props) => {

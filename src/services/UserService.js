@@ -13,3 +13,7 @@ export const getAllUsers = async () => {
         return results
     })
 };
+
+export const getCurrentUser = async () => {
+    return Parse.User.current()
+}

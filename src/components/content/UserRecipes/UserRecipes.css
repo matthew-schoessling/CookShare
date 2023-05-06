@@ -1,20 +1,4 @@
-.viewer {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 640px;
-    height: 480px;
-  }
-
-  .h1 {
-      margin-top: -50px;
-      position: absolute;
-        left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .recent-recipes-wrapper {
+.recent-recipes-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -27,7 +11,6 @@
     flex: none;
     order: 1;
     flex-grow: 0;
-    margin-top: 80px;
 }
 
 .recent-recipes-header {
@@ -93,7 +76,7 @@
     left: -5px;
     top: 0px;
     
-    /* background-image: url('../../../../public/images/sample-user.png'); */
+    background-image: url('../../../../public/images/sample-user.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -182,9 +165,3 @@
         width: 450px;
     }
 }
-
-/* Set the buttons inline */
-.chip-design {
-  margin-right: 10px;
-}
-
